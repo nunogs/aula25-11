@@ -19,11 +19,12 @@ public class EstadoServiceTest {
 	@Autowired
 	private EstadoService estadoService;
 	
-	@org.junit.After
-	public void clean() {
-		estadoService.limpar();
-	}
+//	@org.junit.After
+//	public void clean() {
+//		estadoService.limpar();
+//	}
 	
+
 	@Test
 	public void test() {
 		Estado estado = estadoService.criar("Paraná");
@@ -33,5 +34,24 @@ public class EstadoServiceTest {
 		
 		
 	}
+	
+	@Test
+		public void deveBuscarEstado() {
+			Estado estado = estadoService.buscarPorNome("Paraná");
+			assertNotNull(estado);
+		}
+		
+	@Test
+	public void deveLancarExecucao() {
+		try {
+		Estado estado = estadoService.buscarPorNome("Paraná");
+		}catch (RuntimeException ex) {
+			System.out.println(ex.getMessage());
+		}
+		
+	}
+	
+	
+	
 
 }

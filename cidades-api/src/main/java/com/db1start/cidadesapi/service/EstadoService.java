@@ -25,6 +25,11 @@ public class EstadoService {
 	}
 	
 	
-	
+	public Estado buscarPorNome(String nome) {
+		return estadoRepository.findByNome(nome).orElseThrow(() 
+				-> new RuntimeException("estado não encontrado"));
+	}
+
+
 
 }
