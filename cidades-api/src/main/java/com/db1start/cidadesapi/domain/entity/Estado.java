@@ -35,6 +35,16 @@ public class Estado {
 	}
 	
 	
+	
+	
+
+	public Estado() {
+		this.cidades = new ArrayList<>();
+	}
+
+
+
+
 
 	public long getId() {
 		return id;

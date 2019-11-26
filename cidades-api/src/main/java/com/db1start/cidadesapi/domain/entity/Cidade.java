@@ -32,7 +32,10 @@ public class Cidade {
 		this.uf = uf;
 		
 	}
+	public Cidade() {
 
+		
+	}
 
 
 
