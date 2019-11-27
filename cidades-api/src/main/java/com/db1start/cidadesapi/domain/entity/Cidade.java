@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "cidade")
 public class Cidade {
+	
 	@Column(name = "nome", length = 60)
 	private String nome;
 	
@@ -23,8 +24,6 @@ public class Cidade {
 	@ManyToOne
 	@JoinColumn(name = "estado_id")
 	private Estado uf;
-	
-	
 	
 
 	public Cidade(String nome, Estado uf) {
@@ -56,10 +55,6 @@ public class Cidade {
 	public Estado getUf() {
 		return uf;
 	}
-	
-	
-	
-	
 	
 	
 
