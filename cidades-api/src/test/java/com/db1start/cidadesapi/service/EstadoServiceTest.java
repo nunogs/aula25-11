@@ -2,7 +2,6 @@ package com.db1start.cidadesapi.service;
 
 import static org.junit.Assert.*;
 
-import org.aspectj.lang.annotation.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +18,10 @@ public class EstadoServiceTest {
 	@Autowired
 	private EstadoService estadoService;
 	
-//	@org.junit.After
-//	public void clean() {
-//		estadoService.limpar();
-//	}
+	@org.junit.After
+	public void clean() {
+		estadoService.limpar();
+	}
 	
 
 	@Test

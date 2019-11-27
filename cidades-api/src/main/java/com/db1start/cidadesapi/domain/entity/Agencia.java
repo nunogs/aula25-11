@@ -24,10 +24,10 @@ public class Agencia {
 	Long id;
 	
 	@Column(name = "numero")
-	String número;
+	String numero;
 	
 	@Column(name = "digito")
-	String dígito;
+	String digito;
 	
 	@Column(name = "banco")
 	String banco;
@@ -39,9 +39,9 @@ public class Agencia {
 	@OneToMany(mappedBy = "agencia", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	List<Conta> contas;
 
-	public Agencia(String número, String dígito, String banco, Cidade cidade) {
-		this.número = número;
-		this.dígito = dígito;
+	public Agencia(String numero, String digito, String banco, Cidade cidade) {
+		this.numero = numero;
+		this.digito = digito;
 		this.banco = banco;
 		this.cidade = cidade;
 	}
@@ -50,12 +50,12 @@ public class Agencia {
 		return id;
 	}
 
-	public String getNúmero() {
-		return número;
+	public String getNumero() {
+		return numero;
 	}
 
-	public String getDígito() {
-		return dígito;
+	public String getDigito() {
+		return digito;
 	}
 
 	public String getBanco() {

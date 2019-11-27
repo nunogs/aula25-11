@@ -9,7 +9,7 @@ import com.db1start.cidadesapi.domain.entity.Agencia;
 public interface AgenciaRepository extends JpaRepository<Agencia, Long> {
 	
 	
-	Optional<Agencia> findByNome(String nome);
+	Optional<Agencia> findByNumero(String numero);
 	Optional<Agencia> findById(Long id);
 	
 
