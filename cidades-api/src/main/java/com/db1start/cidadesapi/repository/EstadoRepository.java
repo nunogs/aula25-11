@@ -9,7 +9,7 @@ import com.db1start.cidadesapi.domain.entity.Estado;
 public interface EstadoRepository extends JpaRepository<Estado, Long>{
 	
 	Optional<Estado> findByNome(String nome);
-	Optional<Estado> findById(Long id);
+
 	
 
 }

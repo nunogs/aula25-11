@@ -27,16 +27,10 @@ public class EstadoService {
 	
 	public Estado buscarPorNome(String nome) {
 		return estadoRepository.findByNome(nome).orElseThrow(() 
-				-> new RuntimeException("Estado não encontrado"));
+				-> new RuntimeException("estado não encontrado"));
 	}
-	
-	
-	public Estado buscarPorId(Long id) {
-		return estadoRepository.findById(id).orElseThrow(() 
-				-> new RuntimeException("Estado não encontrada"));
-	}
-
 
 
 
 }
+
